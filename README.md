@@ -29,7 +29,7 @@ If you want to modify the files in the image, then you'll have to build locally.
 
 Build with `docker-compose`:
 ```
-docker-compose build
+docker-compose --env-file .env.dev.config build
 ```
 
 ## Running the container
@@ -38,7 +38,7 @@ Modify the env variables to your liking in the `docker-compose.yml`.
 
 Then spin up a new container using `docker-compose`
 ```
-docker-compose up
+docker-compose --env-file .env.dev.config up
 ```
 
 Note: MSSQL passwords must be at least 8 characters long, contain upper case, lower case and digits.  
@@ -68,7 +68,7 @@ Here's a detailed look at each of the files in the project.
 ## docker-compose.yml
 
 Simplifies the container build and run by organizing the ports and environment into the YAML file.  
-You can then simple call `docker-compose up` instead of the long `docker run...` command.  
+You can then simple call `docker-compose --env-file .env.dev.config up` instead of the long `docker run...` command.  
 
 ## Dockerfile
 The Dockerfile defines how the image will be built.  Each of the commands in the Dockerfile is described below.
