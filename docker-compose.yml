@@ -11,4 +11,4 @@ services:
       MSSQL_PASSWORD: ${MSSQL_PASSWORD}
     ports:
       - "1433:1433"
-    container_name: mssqldev
+    container_name: ${DB_CONTAINER_NAME}
